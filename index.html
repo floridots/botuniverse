@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Orçamento para Twitch</title>
+    <title>Twitch Budget Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-q6n/eU2QZn1JZd7VUNbKjIn8PnYUOKaJpPvzegWgNT+1eJeJq3uBR2vzZ7vCq3sW0pkI+Nt92ALpPhA+RtjGBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
@@ -20,28 +20,30 @@
     </div>
     <main class="container">
       <img src="logo.png" alt="Company Logo" id="company-logo">
-      <h1 class="blue-text">Calculadora de Orçamento para Twitch</h1>
+      <h1 class="blue-text">Twitch Budget Calculator</h1>
       <p class="blue-text">Welcome to our Twitch budget calculator. Use this tool to estimate the cost of running ads on your Twitch channel.</p>
       <form id="budgetForm">
         <div class="input-group">
-          <label for="views" class="blue-text">Quantidade de views:</label>
-          <input type="number" id="views" name="views" min="1" placeholder="Digite a quantidade de views" required>
+          <label for="views" class="blue-text">Number of views:</label>
+          <input type="number" id="views" name="views" min="1" placeholder="Enter number of views" required>
         </div>
         <div class="input-group">
-          <label for="adsense" class="blue-text">Adsense:</label>
+          <label for="adsense" class="blue-text">Ad type:</label>
           <select id="adsense" name="adsense" required>
             <option value="">Select an option</option>
-            <option value="50">No Ads - $10 each 10 views</option>
-            <option value="250">Medium Ads - $50 each 10 views</option>
-            <option value="500">High Ads - $100 each 10 views</option>
+            <option value="50">No Ads - $10 per 10 views</option>
+            <option value="250">Medium Ads - $50 per 10 views</option>
+            <option value="500">High Ads - $100 per 10 views</option>
           </select>
+          <div class="option-info"></div>
         </div>
-        <button type="submit">Calcular</button>
-        <button type="reset" id="resetButton">Reset</button>
+        <button type="submit">Calculate</button>
+        <button type="reset" id="resetButton">Clear</button>
       </form>
       <div id="result" class="blue-text"></div>
-    </main>
-    <script src="scripts.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  </body>
-</html>
+      </main>
+      <script src="scripts.js"></script>
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      
+        </body>
+      </html>
